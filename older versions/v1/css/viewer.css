@@ -1,0 +1,45 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
+#post 
+{
+	width: 80%;
+	left: 10%;
+	position: absolute;
+	top: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 14px;
+} 
+
+#info-bar
+{
+	padding: 10px;
+	height: 40px;
+	text-align: left;
+	width: 100%;
+	left: 0px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	background: #649BFF;
+	z-index: 1;
+	top: 78px;
+}
+
+#text
+{
+	padding: 10px;
+	position: relative;
+	background-color: rgba(255, 255, 255, 1.0);
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+    width: 100%;
+} 

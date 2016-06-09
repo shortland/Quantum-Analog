@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name='viewport' content='initial-scale=1.0, user-scalable=no, width=device-width, height=device-height' minimal-ui/>
+	<script src='js/jquery.js'></script>
+    <script src='js/fastclick.js'></script>
+    <!--<script src='js/modal.js'></script>-->
+	<script src='js/script.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/modal.css'/>
+	<link rel='stylesheet' type='text/css' href='css/style.css'/>
+	<title>Login | Quantum Analog</title>
+</head>
+<body>
+    <div id='bodybg'></div>
+
+    <div id='loginForm'>
+        <div id='loginFormP'>Quantum Analog</div>
+        <input style='width: 300px !important;' type='text' id='emailField' placeholder='Email' autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false'/>
+        <br/>
+        <span id='addonRegister'></span>
+        <input style='width: 300px !important;' type='password' id='passwordField' placeholder='Password' autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false'/>
+        <br/>
+        <button type='button' id='loginSubmit'>Log in</button>
+        <br/><br/>
+        <div id='loginFormEnd'><span id='loginLink' style='display: none;' class='link'>Login</span><span id='registerLink' class='link'>Register</span> or <span id='skipLink' class='link'>Skip login</span> &rarr;</div>
+        
+        <div class="modal-frame">
+            <div class="modal">
+                <div class="modal-inset">
+                    <div class="button close">X</div>
+                    <div class="modal-body">
+                        <p id='popupTextHere'></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-overlay"></div>
+
+    </div>
+
+</body>
+</html>

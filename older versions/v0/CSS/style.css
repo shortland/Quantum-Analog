@@ -1,0 +1,118 @@
+* {
+    -webkit-appearance: none;
+}
+body {
+    margin: 0px;
+    background: url(images/norwayvalley.jpg) no-repeat center;
+    background-size: cover;
+}
+#header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+    font-family: sans-serif;
+    font-weight: lighter;  
+    background: white;
+}
+.tab {
+    padding: 30px;
+    padding-bottom: 31px;
+    margin: -2.5px;
+    cursor: pointer;
+}
+#login {
+    margin-top: 50px;
+    width: 45%;
+    left: 27.5%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    border-top-right-radius: 3pt;
+    border-bottom-right-radius: 0pt;
+    border-top-left-radius: 3pt;
+    border-bottom-left-radius: 0pt;
+    border:1px solid black;
+    background: white;
+}
+#register {
+    margin-top: 32px;
+    width: 45%;
+    left: 27.5%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    border-top-right-radius: 3pt;
+    border-bottom-right-radius: 0pt;
+    border-top-left-radius: 3pt;
+    border-bottom-left-radius: 0pt;
+    border:1px solid black;
+    background: white;
+    display: none;
+}
+.title {
+    top: 0px;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    border-bottom: 1px solid black;
+    border-top-right-radius: 3pt;
+    border-bottom-right-radius: 0pt;
+    border-top-left-radius: 3pt;
+    border-bottom-left-radius: 0pt;
+    background: lightgreen;
+}
+input {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color: black;
+    outline: none;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    border-left: 0px solid black;
+    border-right: 0px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+button[type='submit'] {
+    font-family: sans-serif;
+    background: lightgreen;
+    font-size: 15px;
+    font-weight: lighter;
+    color: black;
+    outline: none;
+    margin-bottom: -17px;
+    margin-top: -1px;
+    height: 50px;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+    border-left: 0px solid black;
+    border-right: 0px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.signup {
+    margin-top: -10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    width: 45%;
+    left: 27.5%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    border:1px solid black;
+    border-radius: 3px;
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.w {
+    cursor: pointer;
+}

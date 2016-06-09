@@ -1,0 +1,52 @@
+*
+{
+	font-family: sans-serif;
+	-webkit-appearance: none;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#postFeed 
+{
+    width: 50%;
+    left: 25%;
+    position: absolute;
+    padding: 10px;
+    top: 70px;
+}
+#post 
+{
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    background: white;
+}
+.postGotTitle
+{
+    color: black;
+}
+
+.postGotContent
+{
+    color: #444;
+    padding: 10px;
+    font-weight: lighter;
+
+}
+.name 
+{
+    color: black;
+}

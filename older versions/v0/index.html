@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Welcome - NAMEOFSITE</title>
+    <link rel='stylesheet' type='text/css' href="CSS/style.css">
+    <script src='JS/jquery.js'></script>
+    <script src='JS/jquery_colors.js'></script>
+    <script>
+        $(window).load(function(){
+            $(".signup").click(function(){
+                $("#register").show();
+                $("#login").hide();
+                $(".signup").hide();
+            });
+            $(".signup").hover(function(){
+                $(".signup").animate({"background-color": "lightgreen"});
+            },
+            function(){
+                $(".signup").animate({"background-color": "#fff"});
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id='header'>
+        <span class='tab'>Explore</span>
+        <span class='tab'>Meet Friends</span>
+        <span class='tab'>Profile</span>
+    </div>
+    <div id='login'>
+        <div id='top'>
+            <div class='title'>Login</div>
+        </div>
+        <form>
+            <input placeholder='USERNAME' type='text'>
+            <br>
+            <input placeholder='PASSWORD' type='password'>
+            <button type='submit'>Continue</button>
+        </form>
+    </div>
+    <br>
+    <div class='w signup'>
+        <span class='q'>Or Sign Up Here</span>
+    </div>
+    <div id='register'>
+        <div id='top'>
+            <div class='title'>Register</div>
+        </div>
+        <form>
+            <input placeholder='USERNAME' type='text'>
+            <br>
+            <input placeholder='EMAIL' type='email'>
+            <br>
+            <input placeholder='PASSWORD' type='password'>
+            <button type='submit'>Get Started!</button>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
