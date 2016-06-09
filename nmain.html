@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | Quantum Analog</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, height=device-height" minimal-ui/>
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/fastclick.js'></script>
+    <script type='text/javascript' src='js/main.js'></script>
+    <script type='text/javascript' src='js/jquery_colors.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/modal.css'/>
+    <link rel='stylesheet' type='text/css' href='css/main.css'/>
+    <script type="text/javascript">
+	$(function()
+	{
+		FastClick.attach(document.body);
+	});
+    </script>
+</head>
+<body>
+
+<div id='topHeader' class='noselect'>
+	<div id='ourTab'>Quantum Analog</div>
+	<span id='profileTab' class='topHeaderRight'>Profile</span>
+	<span id='logoutTab' class='topHeaderRight'>Logout</span>
+</div>
+<div id='midHeader' class='noselect'>
+	<span id='questionsTab' class='midHeaderTabs'>Questions</span>
+	<span id='projectsTab' class='midHeaderTabs'>Projects</span>
+	<span id='peopleTab' class='midHeaderTabs'>People</span>
+</div>
+
+<div id='patchMidOverflow'></div>
+
+<div id='postFeed' style='display:none;'></div>
+
+<div class='modal-frame'>
+    <div class='modal'>
+        <div class='modal-inset'>
+            <div class='button close'>X</div>
+            <div class='modal-body'>
+                <p id='popupTextHere'></p>
+                <div id='postItForm'>
+                    <input type='text' id='postTitle' placeholder='Title' class='postFields'/>
+                    <textarea id='postContent' placeholder='Content' class='postFields'></textarea>
+                    <div id='flexBox'>
+                        <input type='text' id='postTags' placeholder='Tags' class='postFieldsd flexme'/>
+                        <button type='button' id='postButton' class='postFieldse flexme'>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id='modal-overlay'></div>
+
+</body>
+</html>

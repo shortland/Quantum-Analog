@@ -1,0 +1,93 @@
+#body1 {
+	width: 90%;
+	left: 5%;
+	top: 104px;
+	border-bottom: 0px solid black;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	background: white;
+	position: absolute;
+	height: 80%;
+	font-family: sans-serif;
+	font-weight: lighter;
+	overflow-y: scroll; 
+}
+#body2 {
+	width: 90%;
+	left: 5%;
+	top: 104px;
+	border-bottom: 0px solid black;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	background: white;
+	position: absolute;
+	height: 80%;
+	font-family: sans-serif;
+	font-weight: lighter;
+	overflow-y: scroll; 
+	display: none;
+}
+::-webkit-scrollbar { 
+    width: 0px;
+}
+#top {
+	height: 70px;
+	line-height: 70px;
+	top: 0px;
+	position: relative;
+	border-bottom: 1px solid black;
+	margin-bottom: -1px;
+	z-index: 1;
+}
+#right-header {
+	height: 70px;
+	line-height: 70px;
+	top: 0px;
+	position: absolute;
+	text-align: right;
+	width: 100%;
+
+
+}
+.itab {
+	cursor: pointer;
+	padding: 30px;
+}
+.itab:hover {
+	text-decoration: underline;
+}
+.itabactive {
+	text-decoration: underline;
+}
+#posts {
+	width: 100%;
+	display: block;
+}
+.post {
+	width: 100%;
+	position: relative;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-bottom: -1px;
+	padding: 20px;
+}
+.post:hover {
+	color: rgba(244, 240, 235, 1);
+	background: rgba(255, 72, 71, 1);
+	cursor: pointer;
+}
+
+#info {
+	width: 100%;
+}
+.block {
+	width: 100%;
+	position: relative;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-bottom: -1px;
+	padding: 20px;
+	top: 0px;
+}

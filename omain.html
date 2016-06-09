@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | Quantum Analog</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, height=device-height" minimal-ui/>
+	<script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/main.js'></script>
+	<script type='text/javascript' src='js/jquery_colors.js'></script>
+	<link rel='stylesheet' type='text/css' href='css/modal.css'/>
+	<link rel='stylesheet' type='text/css' href='css/main.css'/>
+	<link rel='stylesheet' type='text/css' href='css/headers.css'/>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300italic,300,100italic,100,400italic,700,700italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id='left-header'>
+		<span class='left-tab'>Quantum Analog</span>
+	</div>
+	<div id='header'>
+		<span class='tab active h' onClick='window.location.href="main.html"'>Home</span>
+		<span class='tab'>Suggestions</span>
+		<!--<span class='tab p' id='headerTabPost'>Post</span>-->
+		<span class='tab' onClick='window.location.href="profile.html"'>Profile</span>
+	</div>
+
+	<div id='sidebar'>
+
+		<div id='sidebarHeader'>
+			<span class='AskTab'>Have A Question?</span>
+		</div>
+
+		<div id='thebody'>
+			<span class='info'>
+			<!--	Feel free to ask a question! Either about the website, or a code question! Hopefully, there will be people around to answer you at the time, but we will more than likely get back to you within 24 hours! Click the button below if you'd like to ask us a question.-->
+			</span>
+				<br><br><br>
+			<div class='buttonArea'>
+				<span id='headerTabPost' class='button1'>
+					Ask a Question
+				</span>
+		    </div>
+		</div>
+
+	</div>
+
+	<div id='postFeed'></div>
+
+	<div class='modal-frame'>
+	    <div class='modal'>
+	        <div class='modal-inset'>
+	            <div class='button close'>X</div>
+	            <div class='modal-body'>
+	                
+	                <p id='popupTextHere'></p>
+
+	                <div id='postItForm'>
+						<input type='text' id='postTitle' placeholder='Title' class='postFields'/>
+						<textarea id='postContent' placeholder='Content' class='postFields'></textarea>
+						<div id='flexBox'>
+							<input type='text' id='postTags' placeholder='Tags' class='postFieldsd flexme'/>
+							<button type='button' id='postButton' class='postFieldse flexme'>Submit</button>
+						</div>
+	                </div>
+	            
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div id='modal-overlay'></div>
+
+<!--
+	<div id='formPostFields'>
+
+	</div>
+-->
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name='viewport' content='initial-scale=1.0, user-scalable=no, width=device-width, height=device-height' minimal-ui/>
+	<script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery_colors.js'></script>
+    <script type='text/javascript' src='js/feature.min.js'></script>
+    <script type='text/javascript' src='js/fastclick.js'></script>
+	<script type='text/javascript' src='js/script.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/modal.css'/>
+    <link rel='stylesheet' type='text/css' href='css/style.css'/>
+    <link rel='stylesheet' type='text/css' href='css/headers.css'/>
+    <script type='text/javascript'>
+    $(document).ready(function()
+    {
+        if(!feature.localStorage)
+        {
+            $("#loginForm").css({"color" : "#FFFFFF", "background-color" : "rgba(0, 0, 0, 0.6)", "padding" : "10px", "width" : "300px"});
+            $("#loginForm").html("<h3>Sorry!</h3> You can't login or create an account.<br/><br/>Private-Browsing-Mode disables a browser-feature called 'localStorage', which we use to identify logged in users.<br/><br/>Disable private browsing to login or create your account.<br/><br/>Sorry for any inconvenience. <br/><br/><center><font color='yellow'><span id='skipLink' class='link'>Skip login &rarr;</span></font></center>");
+            $("#loginForm").click(function()
+            {
+                window.location.href = 'main.html';
+            });
+        }
+    });
+    </script>
+	<title>Login | Quantum Analog</title>
+</head>
+<body>
+    <div id='bodybg'></div>
+
+    <div id='loginForm'>
+        <div id='loginFormP'>Quantum Analog</div>
+        <input style='width: 300px !important;' type='text' id='emailField' placeholder='Email' autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false'/>
+        <br/>
+        <span id='addonRegister'></span>
+        <input style='width: 300px !important;' type='password' id='passwordField' placeholder='Password' autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false'/>
+        <br/>
+        <button type='button' id='loginSubmit'>Log in</button>
+        <br/><br/>
+        <div id='loginFormEnd'><span id='loginLink' style='display: none;' class='link'>Login</span><span id='registerLink' class='link'>Register</span> or <span id='skipLink' class='link'>Skip login</span> &rarr;</div>
+        
+        <div class="modal-frame">
+            <div class="modal">
+                <div class="modal-inset">
+                    <div class="button close">X</div>
+                    <div class="modal-body">
+                        <p id='popupTextHere'></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-overlay"></div>
+    </div>
+
+</body>
+</html>

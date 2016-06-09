@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | Quantum Analog</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, height=device-height" minimal-ui/>
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/fastclick.js'></script>
+    <script type='text/javascript' src='js/main.js'></script>
+    <script type='text/javascript' src='js/jquery_colors.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/modal.css'/>
+    <link rel='stylesheet' type='text/css' href='css/main.css'/>
+    <script type="text/javascript">
+    $(function()
+    {
+        FastClick.attach(document.body);
+    });
+    </script>
+</head>
+<body>
+
+<div id='topHeader' class='noselect'>
+    <div id='ourTab'>Quantum Analog</div>
+    <span id='profileTab' class='topHeaderRight'>Profile</span>
+    <span id='logoutTab' class='topHeaderRight'>Logout</span>
+</div>
+
+<div id='midHeader' class='noselect'>
+    <span id='questionsTab' class='midHeaderTabs'>Questions</span>
+    <span id='projectsTab' class='midHeaderTabs'>Projects</span>
+    <span id='peopleTab' class='midHeaderTabs'>People</span>
+</div>
+
+<div id='partitionedPagePosts'></div>
+
+<div id='partitionedSidePosts'>
+    <input type='text' placeholder='search'/>
+    <img src='images/search.png' id='searchImage'/>
+
+    <button type='button' id='askQuestionButton'>Ask a Question</button>
+
+    <span class='rvfont'><div class='spaceGap'>&nbsp;</div>Friends<div id='friendsList'>Friends list here</div></span>
+
+    <span class='rvfont'><div class='spaceGap'>&nbsp;</div>Recently Viewed<div id='recentlyViewed'>Recently viewed posts list here</div></span>
+</div>
+
+<div class='modal-frame'>
+    <div class='modal'>
+        <div class='modal-inset'>
+            <div id='myAskQuestions'>Ask a Question</div>
+            <div class='button close'>X</div>
+            <div class='modal-body'>
+                <p id='popupTextHere'></p>
+                <div id='postItForm'>
+                    <input type='text' id='postTitle' placeholder='Title' class='postFields'/>
+                    <div class='spaceGap'>&nbsp;</div>
+                    <textarea id='postContent' placeholder='Content' class='postFields'></textarea>
+                    <div class='spaceGap'>&nbsp;</div>
+                    <div id='flexBox'>
+                        <input type='text' id='postTags' placeholder='Tags' class='flexme'/>
+                        <button type='button' id='postButton' class='flexme'>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id='modal-overlay'></div>
+
+</body>
+</html>

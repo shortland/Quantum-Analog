@@ -1,0 +1,78 @@
+@font-face {
+	font-family: 'Vegur';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Vegur Regular'), local('Vegur-Regular'), url(fonts-vegur/Vegur-EL_0500.otf) format('truetype');	
+}
+
+* 
+{
+	-webkit-appearance: none;    
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar 
+{
+	width: 0px;
+}
+
+body 
+{
+	margin: 0px;
+	background: rgba(255, 255, 255, 1);
+}
+
+#header 
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: fixed;
+	font-family: 'Vegur', sans-serif;
+	top: 0px;
+	width: 100%;
+	left: 0px;
+	z-index: 10;
+	color: #D3D3D3;
+	text-align: right;
+
+}
+
+#left-header 
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: fixed;
+	top: 0px;
+	font-family: 'Vegur', sans-serif;
+	width: 100%;
+	left: 0px;
+	/*background: #142C45;*/
+	background: black;
+	color: rgba(255,72,71,1);
+	z-index: 9;
+	font-size: 17px;
+	box-shadow: 0 4px 2px -2px gray;
+}
+
+.tab 
+{
+	padding: 20px;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.left-tab 
+{
+	padding: 20px;
+}
+
+.tab:hover
+{
+	color: rgba(255, 72, 71, 1);
+}
+
+.active {
+	color: rgba(255, 72, 72, 1);
+}
