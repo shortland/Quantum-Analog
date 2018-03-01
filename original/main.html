@@ -1,0 +1,97 @@
+<html>
+<head>
+	<title>Quantum Analog</title>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, height=device-height"/>
+	<meta name="description" content="View some random website!"/>
+	<span id='css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/captcha.css">
+	</span>
+	<script src='js/jquery.js'></script>
+	<script src='js/main.js'></script>
+	<script src='js/functions.js'></script>
+	<script src='js/captcha.js'></script>
+	
+</head>
+<body onLoad='fetch_img()'>
+	<div id='header' style='height:60px;font-size:30px'><span style='color:orange'>Q</span>uantum <span style='color:orange'>A</span>nalog </div>
+	<img id='bg' src='images/mountain_snow.jpg' >
+		<div id='content'>
+		<br />
+		<br />
+		<center>
+			<br />
+			<br />
+			
+				<form name='main_form'>
+				<div id='response' style='color:red;'></div>
+				<button type='button' id='login_button' onClick='login_toggle()'>Login</button>
+					<span id='inv_login' style='display: none; color: white;'><h3 style='color: white;'>Login:</h3><br />Username:<br /><input type='text' name='username' id='login_u'><br /><br />Password: <br /><input type='password' name='password' id='login_p'><br /><br /><input type='hidden' name='method' value='login' id='login_m'><button type='button' onClick='ajax_login()'>Login</button></span>
+					<br /><br /><p style='color:white;'>or</p><span id='mash'><br /></span>
+					<button type='button' id='register_button' onClick='register_toggle()'>Register Now</button>
+					<span id='reg_login' style='display: none; color: white;'><br /><h3 style='color: white;'>Register:</h3><br />Username:<br /><input type='text' name='username' id='register_u'><br /><br />Password: <br /><input type='password' name='password' id='register_p'><br /><br />Password Again: <br /><input type='password' name='re_password' id='register_p2'><br /><br />Email:<br /><input type='text' name='email' id='register_e'><br /><br /><input type='hidden' name='method' value='register' id='register_m'>
+					
+					
+		<button type='button' onClick='fetch_img()' style='width:70px;height:22px;'>Refresh</button>
+		<p style='color:white !important;'>Click the oranges</p>
+		<div id='captcha_holder'></div>
+					
+					
+					
+					<br /><br /><button type='button' onClick='ajax_register()'>Register</button><br /></span><br /><br /><p style='color:white;' id='an_or'>or</p><br /><button type='button' onClick='skip()'>Skip</button><br />
+				</form>
+			</center>
+		</div>
+	<style>
+	input[type='text'], input[type='password']
+	{
+		color: #001869; /*#253939;*/
+		border-radius: 0px !important;
+		border: 1px solid #001869; /*#253939;*/
+	}
+	button
+	{
+		background-color: #001869; /*#253939;*/
+		color: #FFFFFF;
+		border: 1px solid #FFFFFF;
+	}
+	form
+	{
+		width: 80%;
+		background-color: rgba(0, 0, 0, 0.6);
+		padding: 20px;
+		border: 1px solid white;
+	}
+	#bg
+	{
+		-webkit-filter: blur(4px); 
+		-moz-filter: blur(4px); 
+		-o-filter: blur 4px); 
+		-ms-filter: blur(4px); 
+		filter: blur(4px);
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+	}
+	</style>
+
+<script>
+var storageEnabled = function() {
+    try {
+        localStorage.setItem('test-key','test-value');
+        if (localStorage.getItem('test-key') == 'test-value'){
+            return true;
+            alert('true');
+        }
+    } catch (e) {};
+    return false;
+    alert('falsep');
+};
+$("#response").html(storageEnabled() ? "" : "It appears Local-Storage is not supported by your browser. Please disable 'Private Mode', or upgrade to a modern browser.<br/><br/>What's Local-Storage?<br/><br/>Local Storage is used in browsers for storing data locally. We use it to store some user data. It's commonly, automatically disabled when in Private browsing which may be the reason you're seeing this message.<br/><br/>You'll be unable to login, or use this site, until Local-Storage is enabled.<br/><br/></div>");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Quantum Analog</title>
+	<meta name="mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, height=device-height"/>
+	<meta name="description" content="View some random website!"/>
+	<script src='js/jquery.js'></script>
+	<script src='js/functions.js'></script>
+	<span id='css'></span>
+	<span id='jsa'></span>
+</head>
+<body onLoad="loaded()" id='body_context'>
+<span id='metrics' style='display:none;'></span>
+<script type="text/javascript">
+	var logged_in = localStorage.getItem('logged');
+	var p_cookie = localStorage.getItem('p_cookie');
+	var u_cookie = localStorage.getItem('u_cookie');
+	$("#metrics").html("<iframe style='display:none;' src='count.pl?u_cookie="+u_cookie+"&p_cookie="+p_cookie+"'></iframe>");
+	if($(window).width() <= 750)
+	{
+		localStorage.setItem('menu_action', 'closed');
+		document.getElementById("css").innerHTML="<link rel='stylesheet' type='text/css' href='css/mobile.css'/>";
+		document.getElementById("css").innerHTML+="<link rel='stylesheet' type='text/css' href='css/hamburger.css'/>";
+		$.getScript('https://code.jquery.com/jquery-2.1.1.min.js');
+		$.getScript('https://code.jquery.com/ui/1.11.1/jquery-ui.min.js');
+		$.getScript('js/hamburger.js');
+	}
+	else
+	{
+		$("#css").html("<link rel='stylesheet' type='text/css' href='css/style.css'/>");
+	}
+</script>
+
+<div id="container">
+<!-- mobile -->
+	<div id='ugly_fixer'></div>
+	<header class='mobile_ops'>
+		<span id='hamburger'>
+			<div></div>
+			<div></div>
+			<div></div>
+		</span>
+	</header>
+	
+	<span id='header_title' class='mobile_ops'>
+		<span style='color:orange;'>Q</span>uantum
+		<span style='color:orange;'>A</span>nalog
+	</span>
+	
+	<nav class='mobile_ops'>
+		<span id='mobile_menu_buttons'>
+			<button type='button' id='profile_in' onClick='begin_m("profile")' class='hamburger_menu_buttons'></button>
+			<button type='button' id='mobile_2' onClick='begin_m("posts")' class='hamburger_menu_buttons'></button>
+			<button type='button' id='mobile_3' onClick='begin_m("photos")' class='hamburger_menu_buttons'></button>
+			<button type='button' id='mobile_4' onClick='begin_m("chat")' class='login_ops hamburger_menu_buttons'></button>
+			<button type='button' id='mobile_5' onClick='begin_m("post")' class='login_ops hamburger_menu_buttons'></button>
+			<button type='button' id='mobile_6' onClick='begin_m("about")' class='hamburger_menu_buttons'></button>
+			<button type='button' id='mobile_7' onClick='logout()' class='login_ops hamburger_menu_buttons'></button>
+		</span>
+	</nav>
+	
+	<div id='contentLayer' class='mobile_ops'></div>
+	
+<!-- end mobile -->
+<!-- desktop -->
+	<div id='header' class='desktop_ops'><span style='color:rgb(50, 180, 180) !important'>Q</span>uantum <span style='color:rgb(50, 180, 180) !important'>A</span>nalog</div>
+	
+	<div id='header_a' class='desktop_ops'>
+		<span id='page1' onClick='begin(this.id)'></span>
+		<span id='page1_b' onClick='begin(this.id)' style='color: rgb(171, 222, 217) !important;'></span>
+			<span class='login_ops'>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span id='page2' onClick='begin(this.id)'></span>
+		<span id='page2_b' onClick='begin(this.id)' style='color: rgb(171, 222, 217) !important;'></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+		<span id='page21' onClick='begin(this.id)'></span>
+		<span id='page21_b' onClick='begin(this.id)' style='color: rgb(171, 222, 217) !important;'></span>
+		<!--
+			<span class='login_ops'>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span id='page3' onClick='begin(this.id)'></span>
+		<span id='page3_b' onClick='begin(this.id)' style='color: rgb(93, 93, 93) !important;'></span>
+		-->
+			&nbsp;&nbsp;&nbsp;&nbsp;
+		<span id='page4' onClick='begin(this.id)'></span>
+		<span id='page4_b' onClick='begin(this.id)' style='color: rgb(171, 222, 217) !important;'></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+		<span id='page5' onClick='begin(this.id)'></span>
+		<span id='page5_b' onClick='begin(this.id)' style='color: rgb(171, 222, 217) !important;'></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+		
+	</div>
+<!-- end desktop-->
+<!-- joint -->
+	<span id='reader_fill' style='display:none;'></span>
+	<!-- eww <img id='logo' style='width:48px;height:48px;border-bottom-width:15px;' src='images/Analog Logo.png'>-->
+	<div id='content'>
+			<p style='color:black;'>Welcome to Quantum Analog.<br/>Loading...</p>
+	</div>
+	<div id='override'></div>
+<!-- end joint -->
+</div>
+
+<div id='new_overlay'></div>
+
+<script type='text/javascript'>
+		if(logged_in == "true")
+		{
+			// Mobile ops
+			$("#profile_in").html("Profile");
+			$("#mobile_2").html("Home");
+			$("#mobile_3").html("Photos");
+			$("#mobile_4").html("Chat");
+			$("#mobile_5").html("Post");
+			$("#mobile_6").html("About");
+			$("#mobile_7").html("Log Out");
+			
+			// Desktop ops
+			$("#page4").html("Profile");
+			$("#page4_b").html("Profile");
+			
+			$("#page1").html("Home");
+			$("#page1_b").html("Home");
+			
+			$("#page21").html("Photos");
+			$("#page21_b").html("Photos");
+
+			$("#page3").html("Chat");
+			$("#page3_b").html("Chat");
+			
+			$("#page2").html("Post");
+			$("#page2_b").html("Post");
+			
+			$("#page5").html("About");
+			$("#page5_b").html("About");
+		}
+		else
+		{
+			// Mobile ops
+			$("#profile_in").html("Login / Register")
+			$("#mobile_2").html("Home");
+			$("#mobile_3").html("Photos");
+			$("#mobile_4").html("");
+			$("#mobile_5").html("");
+			$("#mobile_6").html("About");
+			$("#mobile_7").html("");
+			
+			// Desktop ops
+			$("#page4").html("Login / Register");
+			$("#page4_b").html("Login / Register");
+			
+			$("#page1").html("Home");
+			$("#page1_b").html("Home");
+			
+			$("#page21").html("Photos");
+			$("#page21_b").html("Photos");
+			
+			$("#page5").html("About");
+			$("#page5_b").html("About");
+			
+			$(".login_ops").css("display","none");
+			
+			// Request Login
+			var skip = localStorage.getItem('login_skip');
+			if(skip == "true")
+			{
+			
+			}
+			else
+			{
+				window.location.href='main.html';
+			}
+		}
+</script>
+
+</body>
+</html>
